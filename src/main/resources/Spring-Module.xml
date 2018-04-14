@@ -7,11 +7,32 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 		<constructor-arg value="Telangana"></constructor-arg>
 		<constructor-arg value="India"></constructor-arg>
 	</bean>
+	<bean id="a2" class="com.mkyong.beans.Address">
+		<constructor-arg value="hyderabad"></constructor-arg>
+		<constructor-arg value="Telangana"></constructor-arg>
+		<constructor-arg value="India"></constructor-arg>
+	</bean>
+
 	<bean id="e1" class="com.mkyong.beans.Employee">
-		<constructor-arg value="12" type="int"></constructor-arg>
-		<constructor-arg value="sonoo"></constructor-arg>
+		<constructor-arg  value="1"></constructor-arg>
+		<constructor-arg  value="what is java"></constructor-arg>
 		<constructor-arg>
-			<ref bean = "a1"/>
+		<list>
+			<ref bean="a1" />
+			<ref bean="a2" />
+		</list>
 		</constructor-arg>
+	</bean>
+
+	<bean id="q" class="com.mkyong.beans.Question">
+		<property name="id" value="1"></property>
+		<property name="name" value="What is java"></property>
+		<property name="answers">
+			<map>
+				<entry key="java is a programming languare"
+					value="sonoo jaiswal"></entry>
+				<entry key="java is a platform" value="sachin yadav"></entry>
+			</map>
+		</property>
 	</bean>
 </beans>

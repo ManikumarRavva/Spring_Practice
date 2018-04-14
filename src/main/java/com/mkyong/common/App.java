@@ -4,6 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.mkyong.beans.Employee;
+import com.mkyong.beans.Question;
 
 /**
  * Hello world!
@@ -17,5 +18,8 @@ public class App
     	 
         Employee emp = (Employee) appContext.getBean("e1");
         emp.show();        
+        
+        Question que = (Question) appContext.getBean("q");
+        que.displayInfo();
     }
 }
